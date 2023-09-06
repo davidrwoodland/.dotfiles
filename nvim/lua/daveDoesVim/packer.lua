@@ -50,6 +50,9 @@ return require('packer').startup(function(use)
     end
   }
 
+-- Vim / TMUX navigator
+  use 'christoomey/vim-tmux-navigator'
+
 -- Barbar with icons & git status
   use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
   use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
