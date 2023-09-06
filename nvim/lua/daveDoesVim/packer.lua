@@ -4,15 +4,17 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
+-- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+-- Telescope fuzzy finder 
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+-- Theme / Colorscheme 
   use({
 	  "ellisonleao/gruvbox.nvim",
 	  as = 'gruvbox',
@@ -21,22 +23,55 @@ return require('packer').startup(function(use)
 	  end
   })
 
+-- Lualine top bar tabs
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
+--ChatGPT
+  use({
+  "jackMort/ChatGPT.nvim",
+    config = function()
+      require("chatgpt").setup()
+    end,
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    }
+  })
+
+-- Comment 
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+  }
+
+-- Barbar with icons & git status
   use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
   use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
   use 'romgrk/barbar.nvim'
 
+-- Treesitter
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
+
+-- Harpoon file swapper
   use('theprimeagen/harpoon')
+
+-- Undotree to track changes
   use('mbbill/undotree')
+
+-- Fugutive for Git
   use('tpope/vim-fugitive')
+
+-- Game / Practice
   use('ThePrimeagen/vim-be-good')
 
+-- LSP ZERO 
   use {
   'VonHeikemen/lsp-zero.nvim',
   branch = 'v2.x',
