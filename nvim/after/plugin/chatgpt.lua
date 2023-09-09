@@ -4,3 +4,5 @@ if not status then
 end
 
 chatgpt.setup()
+
+vim.keymap.set('n', '<leader>gpt', [[<Cmd>ChatGPT<CR>]])

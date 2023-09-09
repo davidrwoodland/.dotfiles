@@ -23,7 +23,7 @@ return require('packer').startup(function(use)
 	  end
   })
 
--- Lualine top bar tabs
+-- Lualine bottom-bar   
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
@@ -53,10 +53,11 @@ return require('packer').startup(function(use)
 -- Vim / TMUX navigator
   use 'christoomey/vim-tmux-navigator'
 
--- Barbar with icons & git status
-  use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
-  use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
-  use 'romgrk/barbar.nvim'
+-- Icons  
+  use 'nvim-tree/nvim-web-devicons'
+
+-- Git signs
+  use 'lewis6991/gitsigns.nvim'
 
 -- Treesitter
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -70,6 +71,10 @@ return require('packer').startup(function(use)
 
 -- Fugutive for Git
   use('tpope/vim-fugitive')
+
+-- Surround containers
+  use('tpope/vim-surround')
+  use('rstacruz/vim-closer')
 
 -- Game / Practice
   use('ThePrimeagen/vim-be-good')
@@ -92,3 +97,4 @@ return require('packer').startup(function(use)
 }
 
 end)
+
