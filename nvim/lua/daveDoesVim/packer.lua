@@ -9,7 +9,7 @@ return require('packer').startup(function(use)
 
 -- Telescope fuzzy finder 
   use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
+	  'nvim-telescope/telescope.nvim', tag = '0.1.2',
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
@@ -53,6 +53,9 @@ return require('packer').startup(function(use)
 -- Vim / TMUX navigator
   use 'christoomey/vim-tmux-navigator'
 
+-- Multi Line Editing 
+  use'mg979/vim-visual-multi'
+
 -- Icons  
   use 'nvim-tree/nvim-web-devicons'
 
@@ -78,6 +81,9 @@ return require('packer').startup(function(use)
 
 -- Game / Practice
   use('ThePrimeagen/vim-be-good')
+
+-- Check for Conflicting Keybinds
+  use ('folke/which-key.nvim')
 
 -- LSP ZERO 
   use {
