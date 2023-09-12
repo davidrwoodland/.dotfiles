@@ -77,13 +77,16 @@ return require('packer').startup(function(use)
 
 -- Surround containers
   use('tpope/vim-surround')
-  use('rstacruz/vim-closer')
+  use('m4xshen/autoclose.nvim')
 
 -- Game / Practice
   use('ThePrimeagen/vim-be-good')
 
 -- Check for Conflicting Keybinds
   use ('folke/which-key.nvim')
+
+-- Jump Around
+  use('ggandor/leap.nvim')
 
 -- LSP ZERO 
   use {
