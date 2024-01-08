@@ -46,8 +46,10 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "0"
 
 -- " Configure GUI font
-vim.opt.guifont = "SFMonoNerdFont"
+vim.opt.guifont = "SFMono Nerd Font"
 
 -- " Highlight the current line
 vim.opt.cursorline = true
 
+-- " Behaviour
+vim.opt.errorbells = false

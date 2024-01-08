@@ -1,3 +1,2 @@
-require("daveDoesVim")
-
-
+require('config')
+require('plugins')

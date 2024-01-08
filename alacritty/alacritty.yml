@@ -37,7 +37,7 @@ font:
 
   bold:
     family: SFMono Nerd Font
-    style: Bold
+    style: Semibold
 
   italic:
     family: SFMono Nerd Font
@@ -45,6 +45,6 @@ font:
 
   bold_italic:
     family: SFMono Nerd Font
-    style: Heavy Italic
+    style: Medium Italic
 
   size: 18
