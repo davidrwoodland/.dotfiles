@@ -1,55 +1,57 @@
+local vo = vim.opt
+
 -- " Line numbers and relative line numbers
-vim.opt.nu = true
-vim.opt.relativenumber = true
+vo.nu = true
+vo.relativenumber = true
 
 -- " Tab settings
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+vo.tabstop = 4
+vo.softtabstop = 4
+vo.shiftwidth = 4
+vo.expandtab = true
 
 -- " Smart indenting
-vim.opt.smartindent = true
+vo.smartindent = true
 
 -- " Text wrapping and indentation
-vim.opt.wrap = true
-vim.opt.breakindent = true
+vo.wrap = true
+vo.breakindent = true
 
 -- " Disable swap and backup files, configure undodir
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vim.opt.undofile = true
+vo.swapfile = false
+vo.backup = false
+vo.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vo.undofile = true
 
 -- " Search settings
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
+vo.hlsearch = false
+vo.incsearch = true
 
 -- " Enable termguicolors and set the background to dark
-vim.opt.termguicolors = true
-vim.opt.background = "dark"
+vo.termguicolors = true
+vo.background = "dark"
 
 -- " Display the sign column
-vim.opt.signcolumn = "yes"
+vo.signcolumn = "yes"
 
 -- " Scrolloff and sign column settings
-vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes"
+vo.scrolloff = 8
+vo.signcolumn = "yes"
 
 -- " Define additional characters as part of filenames
-vim.opt.isfname:append("@-@")
+vo.isfname:append("@-@")
 
 -- " Set updatetime
-vim.opt.updatetime = 50
+vo.updatetime = 50
 
 -- " Disable color column
-vim.opt.colorcolumn = "0"
+vo.colorcolumn = "0"
 
 -- " Configure GUI font
-vim.opt.guifont = "SFMono Nerd Font"
+vo.guifont = "SFMono Nerd Font"
 
 -- " Highlight the current line
-vim.opt.cursorline = true
+vo.cursorline = true
 
 -- " Behaviour
-vim.opt.errorbells = false
+vo.errorbells = false

@@ -1,7 +1,7 @@
 return {
     'mg979/vim-visual-multi',
     lazy = false,
-    config = function ()
+    config = function()
     end,
     keys = {
 
