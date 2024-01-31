@@ -34,6 +34,8 @@ local config = function()
             "vue",
             "svelte",
             "toml",
+            "json",
+            "jsonc",
         },
         auto_install = true,
         highlight = {

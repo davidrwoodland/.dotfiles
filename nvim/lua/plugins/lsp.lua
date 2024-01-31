@@ -28,6 +28,7 @@ return {
                 'saadparwaiz1/cmp_luasnip',
                 'rafamadriz/friendly-snippets',
                 'onsails/lspkind-nvim',
+                'hrsh7th/cmp-cmdline',
             },
         },
         config = function()
@@ -49,7 +50,28 @@ return {
                     ['<C-b>'] = cmp_action.luasnip_jump_backward(),
                 })
             })
-        end
+            -- `/` cmdline setup.
+            cmp.setup.cmdline('/', {
+                mapping = cmp.mapping.preset.cmdline(),
+                sources = {
+                    { name = 'buffer' }
+                }
+            })
+            -- `:` cmdline setup.
+            cmp.setup.cmdline(':', {
+                mapping = cmp.mapping.preset.cmdline(),
+                sources = cmp.config.sources({
+                    { name = 'path' }
+                }, {
+                    {
+                        name = 'cmdline',
+                        option = {
+                            ignore_cmds = { 'Man', '!' }
+                        }
+                    }
+                })
+            })
+        end,
     },
 
     -- LSP
@@ -95,4 +117,3 @@ return {
         end
     }
 }
-
