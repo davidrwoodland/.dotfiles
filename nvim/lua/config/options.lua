@@ -55,3 +55,6 @@ vo.cursorline = true
 
 -- " Behaviour
 vo.errorbells = false
+
+-- " Search upper/lower case"
+vo.ignorecase = true
