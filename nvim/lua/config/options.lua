@@ -1,8 +1,7 @@
 local vo = vim.opt
 
--- " Line numbers and relative line numbers
+-- " Line numbers 
 vo.nu = true
-vo.relativenumber = true
 
 -- " Tab settings
 vo.tabstop = 4
@@ -24,7 +23,7 @@ vo.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vo.undofile = true
 
 -- " Search settings
-vo.hlsearch = false
+vo.hlsearch = true
 vo.incsearch = true
 
 -- " Enable termguicolors and set the background to dark
@@ -36,6 +35,8 @@ vo.signcolumn = "yes"
 
 -- " Scrolloff and sign column settings
 vo.scrolloff = 8
+vo.sidescrolloff = 8
+vo.mousescroll = "ver:1,hor:0"
 vo.signcolumn = "yes"
 
 -- " Define additional characters as part of filenames
@@ -58,3 +59,5 @@ vo.errorbells = false
 
 -- " Search upper/lower case"
 vo.ignorecase = true
+vo.smartcase = true
+
