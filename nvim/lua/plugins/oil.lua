@@ -13,7 +13,7 @@ return {
 
         delete_to_trash = true,
         skip_confirm_for_simple_edits = true,
-        trash_command = "trash",
+        -- trash_command = "trash",
       })
     end
   },
