@@ -1,7 +1,7 @@
 return {
     {
         'VonHeikemen/lsp-zero.nvim',
-        branch = 'v3.x',
+        branch = 'v4.x',
         lazy = false,
         config = true,
         init = function()
@@ -97,7 +97,6 @@ return {
                 ensure_installed = {
                     "efm",
                     "lua_ls",
-                    "tsserver",
                     "eslint",
                 },
                 handlers = {
