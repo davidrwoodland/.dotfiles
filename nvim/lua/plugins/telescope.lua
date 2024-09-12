@@ -1,10 +1,7 @@
-local vimgrep_arguments = { "-L" }
-
 local config = function()
     local telescope = require("telescope")
     telescope.setup({
         defaults = {
-            vimgrep_arguments = vimgrep_arguments,
             mappings = {
                 i = {
                     ["<C-j>"] = "move_selection_next",
@@ -33,18 +30,16 @@ end
 
 return {
     'nvim-telescope/telescope.nvim',
-    tag = '0.1.5',
+    tag = '0.1.8',
     dependencies = { 'nvim-lua/plenary.nvim' },
     lazy = false,
     config = config,
     keys = {
-        vim.api.nvim_set_keymap('n', '<leader>ff',
-            [[<Cmd>lua require('telescope.builtin').find_files({ follow = true })<CR>]],
+        vim.api.nvim_set_keymap('n', '<leader>ff', [[<Cmd>lua require('telescope.builtin').find_files({ follow = true })<CR>]],
             { noremap = true, silent = true }),
         vim.api.nvim_set_keymap('n', '<leader>fg', [[<Cmd>lua require('telescope.builtin').git_files()<CR>]],
             { noremap = true, silent = true }),
-        vim.api.nvim_set_keymap('n', '<leader>ps',
-            [[<Cmd>lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ") })<CR>]],
+        vim.api.nvim_set_keymap('n', '<leader>fi', [[<Cmd>lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ") })<CR>]],
             { noremap = true, silent = true }),
         vim.api.nvim_set_keymap('n', '<leader>fh', [[<Cmd>lua require('telescope.builtin').help_tags()<CR>]],
             { noremap = true, silent = true }),
